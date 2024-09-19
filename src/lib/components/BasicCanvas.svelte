@@ -18,9 +18,9 @@
   let currentTool: Tool = $state("pencil");
   // Pencil Settings
   let activeColor: string = $state("#000000");
-  let pencilSize: number = $state(5);
+  let pencilSize: number = $state(10);
   // Eraser Settings
-  let eraserSize: number = $state(20);
+  let eraserSize: number = $state(10);
 
   function draw(event: MouseEvent) {
     if (event.target !== Canvas) {
@@ -119,8 +119,8 @@
             <span aria-hidden="true">{activeColor}</span>
           </button>
           <input type="color" tabindex="-1" bind:value={activeColor} bind:this={ColorPicker} />
-          <input type="number" min="1" max="200" bind:value={pencilSize} />
-          <input type="range" min="1" max="200" bind:value={pencilSize} />
+          <input type="number" min="10" max="400" step="10" bind:value={pencilSize} />
+          <input type="range" min="10" max="400" step="10" bind:value={pencilSize} />
         </div>        
       {:else if currentTool === "eraser"}
         <div class="eraser-settings">
