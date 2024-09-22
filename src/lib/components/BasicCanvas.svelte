@@ -124,8 +124,8 @@
         </div>        
       {:else if currentTool === "eraser"}
         <div class="eraser-settings">
-          <input type="number" min="1" max="400" bind:value={eraserSize} />
-          <input type="range" min="1" max="400" bind:value={eraserSize} />
+          <input type="number" min="10" max="400" step="10" bind:value={eraserSize} />
+          <input type="range" min="10" max="400" step="10" bind:value={eraserSize} />
         </div>   
       {/if}
     </div>
