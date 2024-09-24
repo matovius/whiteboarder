@@ -121,12 +121,12 @@
           <input type="color" tabindex="-1" bind:value={activeColor} bind:this={ColorPicker} />
           <input type="number" min="10" max="400" step="10" bind:value={pencilSize} />
           <input type="range" min="10" max="400" step="10" bind:value={pencilSize} />
-        </div>        
+        </div>
       {:else if currentTool === "eraser"}
         <div class="eraser-settings">
           <input type="number" min="10" max="400" step="10" bind:value={eraserSize} />
           <input type="range" min="10" max="400" step="10" bind:value={eraserSize} />
-        </div>   
+        </div>
       {/if}
     </div>
   </div>
