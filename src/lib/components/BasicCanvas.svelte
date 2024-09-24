@@ -96,17 +96,17 @@
     <div class="container">
       <button class="btn pencil" aria-label="Pencil"
         onclick={() => { setTool('pencil'); }} disabled={currentTool === 'pencil'}>
-        <div class="front" aria-hidden="true">Pencil</div>
+        <span aria-hidden="true">Pencil</span>
       </button>
       <button class="btn eraser" aria-label="Eraser"
         onclick={() => { setTool('eraser'); }} disabled={currentTool === 'eraser'}>
-        <div class="front" aria-hidden="true">Eraser</div>
+        <span aria-hidden="true">Eraser</span>
       </button>
       <button class="btn clear-canvas" aria-label="Clear canvas" onclick={clearCanvas}>
-        <div class="front" aria-hidden="true">Clear Canvas</div>
+        <span aria-hidden="true">Clear Canvas</span>
       </button>
-      <button class="btn export" aria-label="Export">
-        <div class="front" aria-hidden="true">Export</div>
+      <button class="btn export" aria-label="Export drawing" onclick={exportCanvas}>
+        <span aria-hidden="true">Export</span>
       </button>
     </div>
     <div class="settings">
