@@ -7,6 +7,8 @@
   let context: CanvasRenderingContext2D;
 
   let ColorPicker: HTMLInputElement;
+  let ExportDialog: HTMLDialogElement;
+  let isExportDialogOpen: boolean = $state(false);
 
   type Tool = "pencil" | "eraser";
 
@@ -77,6 +79,11 @@
     }
   }
 
+  function exportCanvas() {
+    console.log("This feature is coming soon");
+    return;
+  }
+
   // $inspect(coords);
 
   onMount(() => {
@@ -108,6 +115,9 @@
       <button class="btn export" aria-label="Export drawing" onclick={exportCanvas}>
         <span aria-hidden="true">Export</span>
       </button>
+      <dialog bind:this={ExportDialog}>
+        <div></div>
+      </dialog>
     </div>
     <div class="settings">
       {#if currentTool === "pencil"}
